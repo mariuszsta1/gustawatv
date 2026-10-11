@@ -2,6 +2,62 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <title>Moje Pliki do Pobrania</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; text-align: center; }
+        .btn { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 10px; }
+        .btn:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Pobierz moje pliki</h1>
+    <p>Kliknij poniższe przyciski, aby bezpiecznie pobrać pliki:</p>
+
+    <!-- Zmień "nazwa_pliku.pdf" na dokładną nazwę swojego pliku -->
+    <a href="nazwa_pliku.pdf" download class="btn">Pobierz Dokument PDF</a>
+    <br>
+    <a href="program.exe" download class="btn">Pobierz Program EXE</a>
+</body>
+</html>
+Use code with caution.
+Zapisz plik. Upewnij się, że nazwy plików w kodzie (href="...") są dokładnie takie same jak pliki w folderze (wielkość liter ma znaczenie!).
+
+Krok 3: Umieść pliki na GitHubie
+
+1. Zaloguj się na GitHub.com.
+2. Kliknij przycisk New (lub ikonę plusa w prawym górnym rogu -> New repository).
+3. Ustaw parametry:
+	• Repository name: Wpisz dowolną nazwę (np. pobieralnia).
+	• Public/Private: Musisz wybrać Public (darmowe strony GitHub Pages działają tylko na publicznych repozytoriach).
+4. Kliknij Create repository.
+5. Na nowej stronie kliknij link "uploading an existing file".
+6. Przeciągnij i upuść całą zawartość swojego folderu (plik index.html oraz pliki do pobrania).
+7. Kliknij zielony przycisk Commit changes na dole strony.
+
+Krok 4: Włącz stronę internetową (GitHub Pages)
+
+1. W swoim repozytorium na GitHubie wejdź w zakładkę Settings (koło zębate na górnym pasku).
+2. Z menu po lewej stronie wybierz Pages (w sekcji Code and automation).
+3. W sekcji "Build and deployment" znajdź opcję Branch.
+4. Zmień ustawienie z None na main (lub master) i kliknij Save.
+
+Gotowe!
+
+Po około 1-2 minutach odśwież stronę w ustawieniach. Na samej górze sekcji GitHub Pages pojawi się adres URL Twojej strony (np. https://github.io). Każdy, kto na nią wejdzie, będzie mógł pobrać Twoje pliki.
+Jeśli chcesz rozbudować tę stronę, daj mi znać:
+• Czy chcesz, aby strona miała licznik pobrań? (Wymaga to użycia funkcji GitHub Releases)
+• Czy wolisz bardziej nowoczesny wygląd strony (np. z użyciem gotowego szablonu)?
+AI responses may include mistakes. Learn more
+
+bardziej nowoczesny wygląd
+
+Oto nowoczesny, minimalistyczny projekt strony. Wykorzystuje on popularne biblioteki Tailwind CSS (do wyglądu) oraz Lucide Icons (do ikon), dzięki czemu strona świetnie wygląda zarówno na komputerach, jak i na telefonach.
+Wystarczy, że podmienisz cały kod w swoim pliku index.html na poniższy:
+html
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centrum Pobierania Plików</title>
     <!-- Tailwind CSS dla nowoczesnego wyglądu -->
