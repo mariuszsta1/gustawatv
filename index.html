@@ -2,20 +2,97 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Moje Pliki do Pobrania</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; text-align: center; }
-        .btn { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 10px; }
-        .btn:hover { background-color: #0056b3; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrum Pobierania Plików</title>
+    <!-- Tailwind CSS dla nowoczesnego wyglądu -->
+    <script src="https://jsdelivr.net"></script>
+    <!-- Lucide dla ładnych ikon -->
+    <script src="https://unpkg.com"></script>
 </head>
-<body>
-    <h1>Pobierz moje pliki</h1>
-    <p>Kliknij poniższe przyciski, aby bezpiecznie pobrać pliki:</p>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Zmień "nazwa_pliku.pdf" na dokładną nazwę swojego pliku -->
-    <a href="nazwa_pliku.pdf" download class="btn">Pobierz Dokument PDF</a>
-    <br>
-    <a href="program.exe" download class="btn">Pobierz Program EXE</a>
+    <!-- Główna sekcja -->
+    <main class="max-w-2xl mx-auto px-4 py-16 flex-1 w-full">
+        <!-- Nagłówek -->
+        <div class="text-center mb-12">
+            <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-2xl mb-4 shadow-xs">
+                <i data-lucide="download-cloud" class="w-8 h-8"></i>
+            </div>
+            <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                Centrum Pobierania
+            </h1>
+            <p class="mt-3 text-lg text-slate-500">
+                Wybierz interesujący Cię plik z poniższej listy. Wszystkie pliki są bezpieczne i gotowe do użycia.
+            </p>
+        </div>
+
+        <!-- Lista plików -->
+        <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden divide-y divide-slate-100">
+            
+            <!-- PLIK 1: Dokument -->
+            <div class="p-5 flex items-center justify-between hover:bg-slate-50 transition duration-200">
+                <div class="flex items-center space-x-4">
+                    <div class="p-2.5 bg-red-50 text-red-500 rounded-xl">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <!-- Zmień nazwę pliku w wyświetlaniu -->
+                        <h3 class="font-semibold text-slate-900">Dokument PDF</h3>
+                        <p class="text-xs text-slate-400">Format: PDF • Rozmiar: ~1.2 MB</p>
+                    </div>
+                </div>
+                <!-- PAMIĘTAJ: W href wpisz dokładną nazwę pliku z GitHub -->
+                <a href="nazwa_pliku.pdf" download class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-xl text-sm font-medium transition duration-200 shadow-xs">
+                    <span>Pobierz</span>
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- PLIK 2: Program / Aplikacja -->
+            <div class="p-5 flex items-center justify-between hover:bg-slate-50 transition duration-200">
+                <div class="flex items-center space-x-4">
+                    <div class="p-2.5 bg-blue-50 text-blue-500 rounded-xl">
+                        <i data-lucide="terminal" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900">Aplikacja Instalacyjna</h3>
+                        <p class="text-xs text-slate-400">Format: EXE • Rozmiar: ~15.4 MB</p>
+                    </div>
+                </div>
+                <a href="program.exe" download class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-xl text-sm font-medium transition duration-200 shadow-xs">
+                    <span>Pobierz</span>
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- PLIK 3: Archiwum ZIP (Przykład dodania kolejnego pliku) -->
+            <div class="p-5 flex items-center justify-between hover:bg-slate-50 transition duration-200">
+                <div class="flex items-center space-x-4">
+                    <div class="p-2.5 bg-amber-50 text-amber-500 rounded-xl">
+                        <i data-lucide="folder-archive" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900">Paczka Graficzna</h3>
+                        <p class="text-xs text-slate-400">Format: ZIP • Rozmiar: ~45 MB</p>
+                    </div>
+                </div>
+                <a href="grafiki.zip" download class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-xl text-sm font-medium transition duration-200 shadow-xs">
+                    <span>Pobierz</span>
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Stopka -->
+    <footer class="text-center py-6 text-xs text-slate-400 border-t border-slate-100">
+        <p>&copy; 2026 Moje Centrum Plików. Strona hostowana na GitHub Pages.</p>
+    </footer>
+
+    <!-- Inicjalizacja ikon Lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
